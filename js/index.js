@@ -21,9 +21,9 @@ firstP.addEventListener('click', function(event){
     event.target.style.backgroundColor = 'green'
 })
 
-const navBar = document.querySelector('nav a ')
+const navBarOne = document.querySelector('nav a ')
 
-navBar.addEventListener('dblclick' , function(event){
+navBarOne.addEventListener('dblclick' , function(event){
     
     event.target.style.color = 'yellow'
 
@@ -56,3 +56,13 @@ letsGo.addEventListener('click', function(){
 adventClick.addEventListener('click' , function(){
     document.querySelector('.content-pick').scrollIntoView()
 })
+
+const navBar = document.querySelector('header.main-navigation')
+
+navBar.addEventListener('click', function () {
+  if (navBar.style.backgroundColor === 'white') {
+    navBar.style.backgroundColor = 'blue'
+  } else {
+    navBar.style.backgroundColor = 'white'
+  }
+});
