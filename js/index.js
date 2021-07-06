@@ -24,22 +24,35 @@ firstP.addEventListener('click', function(event){
 const navBar = document.querySelector('nav a ')
 
 navBar.addEventListener('dblclick' , function(event){
+    
     event.target.style.color = 'yellow'
 
 })
 
 
-const newFooter = document.querySelector('.footer')
+const newFooter = document.querySelector('footer')
     
-newFooter.addEventListener('load', function(event){
+newFooter.addEventListener('click', function(event){
         event.target.style.backgroundColor = 'black'
 })
 
 
-const keyPressDown = document.querySelector('.content-destination h2')
-
-keyPressDown.addEventListener('keydown' , function(event){
+document.addEventListener('keydown' , function(event){
     if (event.keyCode === 84){
-        event.target.style.color = 'orange'
+        event.target.style.backgroundColor = 'orange'
+    }else{
+        event.target.style.backgroundColor = ''
     }
+})
+
+const letsGo = document.querySelector('.text-content:nth-of-type(1) h2')
+
+const adventClick = document.querySelector('text-content:nth-of-type(2) h2')
+
+letsGo.addEventListener('click', function(){
+    document.querySelector('.text-content:nth-of-type(2) h2').scrollIntoView()
+})
+
+adventClick.addEventListener('click' , function(){
+    document.querySelector('.content-pick').scrollIntoView()
 })
